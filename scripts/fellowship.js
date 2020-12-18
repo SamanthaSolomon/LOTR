@@ -189,7 +189,10 @@ const leaveTheShire = () => {
       // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
       
 
-      // const $moveHobbits = $("#The-Shire.article").children("hobbit") 
+      const $moveHobbits = $("#The-Shire ul").children()
+      // console.log("$moveHobbits", $moveHobbits ) 
+
+      $moveHobbits.appendTo("#Rivendell")
 
       
 
