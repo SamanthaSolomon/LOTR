@@ -157,6 +157,8 @@ const makeBuddies = () => {
 
   // 2. display an unordered list of buddies in the aside
 
+  
+  
   const $ul = $("<ul>")
   
   for (let index = 0; index < buddies.length; index++){
@@ -172,6 +174,7 @@ const makeBuddies = () => {
 
   $ul.appendTo($aside)
 
+
 };
 
 // COMMIT YOUR WORK
@@ -184,6 +187,11 @@ const makeBuddies = () => {
 const leaveTheShire = () => {
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
       // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
+      
+
+      // const $moveHobbits = $("#The-Shire.article").children("hobbit") 
+
+      
 
 };
 
