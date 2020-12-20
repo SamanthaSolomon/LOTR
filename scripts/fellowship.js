@@ -189,7 +189,7 @@ const leaveTheShire = () => {
       // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
       
 
-      const $moveHobbits = $("#The-Shire ul").children()
+      const $moveHobbits = $("#The-Shire").children()
       // console.log("$moveHobbits", $moveHobbits ) 
 
       $moveHobbits.appendTo("#Rivendell")
@@ -210,7 +210,7 @@ const beautifulStranger = () => {
      // hint: You can get a list of elements by tag name, such as 'aside'
 
      const $strider = $("aside ul").children("li").eq(3).text('Aragon')
-     console.log ("$strider", $strider)
+    //  console.log ("$strider", $strider)
      
 
 
@@ -226,11 +226,26 @@ const forgeTheFellowShip = () => {
 
   // 1. create a new div with an id 'the-fellowship'
 
+ const $fellowshipDiv = $('<div>').attr('id', 'the-fellowship')
+
+
   // 2. add an h1 with the text 'The Fellowship' to this new div
+
+$fellowshipDiv.append($('<h1>').text('The Fellowship')) 
+// console.log('$fellowshipDiv', $fellowshipDiv)
 
   // 3. append the fellowship to middle-earth
 
+$('#middle-earth').append($fellowshipDiv)
+
+
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
+
+  $hobbits = $('ul').eq(0)
+  $buddies = $('ul').eq(2)
+
+  $fellowshipDiv.append($hobbits)
+  $fellowshipDiv.append($buddies)
 
 };
 
