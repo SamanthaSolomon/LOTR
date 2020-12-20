@@ -280,9 +280,19 @@ const hornOfGondor = () => {
 
   // 1. create a pop-up alert that the horn of gondor has been blown
 
+  alert("Horn of Gondor has been blow!");
+
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
+  const $dead = $('.buddy').eq(3)
+  
+  $dead.css("text-decoration", "line-through")
 
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
+
+  const $urukHai = $('.baddy').eq(2)
+  // console.log('$urukHai', $urukHai)
+  
+  $urukHai.remove()
 
 };
 
