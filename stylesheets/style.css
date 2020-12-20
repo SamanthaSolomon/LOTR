@@ -110,7 +110,11 @@ ul {
   display: inline-block;
 }*/
 
-
+.the-white{
+  background-color: white;
+  border: solid 2px gray;
+  display: inline
+}
 
 
 /*===========================================================*/
