@@ -319,7 +319,7 @@ $sam.appendTo('#Mordor')
 
   const $mountDoom = $('<div>').attr('id', 'mount-doom')
 
-  $mountDoom.append('#Mordor')
+  $mountDoom.appendTo('#Mordor')
 
 
 };
@@ -334,9 +334,23 @@ const weWantsIt = () => {
 
   // 1. Create a div with an id of 'gollum' and add it to Mordor
 
+  const $gollum = $('<div>').attr('id', 'gollum')
+
+  $gollum.appendTo('#Mordor')
+
   // 2. Move the ring from Frodo and give it to Gollum
 
+  $gollum.append('#the-ring')
+  
+  const $frodo = $('#mordor','.hobbit').eq(0)
+  console.log('$frodo', $frodo)
+  
+  // $frodo.removeAttr('id')
+
+
   // 3. Move Gollum into Mount Doom
+
+  $gollum.appendTo('#mount-doom')
 
 };
 
