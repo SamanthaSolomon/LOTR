@@ -338,17 +338,19 @@ const weWantsIt = () => {
 
   $gollum.appendTo('#Mordor')
 
-  // 2. Move the ring from Frodo and give it to Gollum
+  // // 2. Move the ring from Frodo and give it to Gollum
 
   $gollum.append('#the-ring')
   
-  const $frodo = $('#mordor','.hobbit').eq(0)
-  console.log('$frodo', $frodo)
+  
+  //////////// Stumped on how to remove the ring from frodo.
+  // const $frodo = $('.hobbit').eq(0)
+  // console.log('$frodo', $frodo)
   
   // $frodo.removeAttr('id')
 
 
-  // 3. Move Gollum into Mount Doom
+  // // 3. Move Gollum into Mount Doom
 
   $gollum.appendTo('#mount-doom')
 
@@ -364,9 +366,26 @@ const thereAndBackAgain = () => {
 
   // 1. remove Gollum and the Ring from the DOM
 
+  $('#mount-doom').empty()
+
   // 2. remove all the baddies from the DOM
 
+  const $baddies = $('#Mordor ul').empty()
+
+ 
   // 3. Move all the hobbits back to the shire
+
+  const $frodo = $('.hobbit').eq(0)
+  $frodo.appendTo('#The-Shire')
+
+  const $sam = $('.hobbit').eq(1)
+  $sam.appendTo('#The-Shire')
+
+  const $merry = $('.hobbit').eq(2)
+  $merry.appendTo('#The-Shire')
+
+  const $pippin = $('.hobbit').eq(3)
+  $pippin.appendTo('#The-Shire')
 
 };
 
