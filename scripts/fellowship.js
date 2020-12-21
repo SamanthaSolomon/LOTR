@@ -280,7 +280,7 @@ const hornOfGondor = () => {
 
   // 1. create a pop-up alert that the horn of gondor has been blown
 
-  alert("Horn of Gondor has been blow!");
+  alert("Horn of Gandor has been blow!");
 
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
   const $dead = $('.buddy').eq(3)
@@ -306,7 +306,21 @@ const itsDangerousToGoAlone = () => {
 
   // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
 
+const $frodo = $('.hobbit').eq(0)
+const $sam = $('.hobbit').eq(1)
+
+$frodo.appendTo('#Mordor')
+$sam.appendTo('#Mordor')
+
+// console.log('$frodo', $frodo)
+// console.log('$sam', $sam)
+
   // 2. add a div with an id of 'mount-doom' to Mordor
+
+  const $mountDoom = $('<div>').attr('id', 'mount-doom')
+
+  $mountDoom.append('#Mordor')
+
 
 };
 
